@@ -1,0 +1,43 @@
+
+
+# from = country, judgement initiator
+# this = any, player selected target
+defined_text = {
+	name = mopt_GetJudgementTargetName
+	default = mopt_judgement_no_target
+	random = no
+
+	text = {
+		localization_key = mopt_judgement_invalid_target
+		trigger = {
+			OR = {
+				AND = {
+					exists = owner
+					owner = { mopt_is_valid_judgement_target = no }
+				}
+				AND = {
+					exists = space_owner
+					space_owner = { mopt_is_valid_judgement_target = no }
+				}
+			}
+		}
+		weight = 1
+	}
+
+	text = {
+		localization_key = mopt_judgement_valid_target_owner
+		trigger = {
+			exists = owner
+			owner = { mopt_is_valid_judgement_target = yes }
+		}
+		weight = 2
+	}
+	text = {
+		localization_key = mopt_judgement_valid_target_space_owner
+		trigger = {
+			exists = space_owner
+			space_owner = { mopt_is_valid_judgement_target = yes }
+		}
+		weight = 1
+	}
+}

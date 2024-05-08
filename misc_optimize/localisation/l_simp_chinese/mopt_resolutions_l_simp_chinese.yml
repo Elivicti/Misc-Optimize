@@ -1,0 +1,19 @@
+﻿l_simp_chinese:
+ resolution_category_mopt_custodian_federation_control: "联邦控制"
+ resolution_category_mopt_imperial_federation_control: "联邦控制"
+
+ resolution_mopt_dissolve_federation: "解散联邦"
+ resolution_mopt_dissolve_federation_desc: "纵容这个行迹恶劣的小团体的存在是对星海共同体的侮辱，是时候出重拳了。"
+ resolution_mopt_dissolve_federation_imperial: "$resolution_mopt_dissolve_federation$"
+ resolution_mopt_dissolve_federation_imperial_desc: "纵容这个小团体的存在是对帝国权威的蔑视，必须要出重拳。"
+
+ resolution_mopt_same_federation_with_proposer: "与提案国在同一联邦"
+ resolution_mopt_dissoved_federation_leader: "联邦领袖"
+ resolution_mopt_ai_not_same_federation: "与目标不在同一联邦"
+ resolution_mopt_low_federation_cohesion: "不团结的联邦"
+ resolution_mopt_subject_low_loyaty: "不忠"
+
+ mopt_opinion_dissoved_federation: "强迫解散联邦"
+ mopt_opinion_dissoved_federation_leader: "强迫解散联邦"
+
+ resolution_mopt_dissolve_federation_tooltip: "§Y[this.GetName]§!领导的§Y[this.Federation.GetName]§!将被解散。\n\n§L注意：若§Y[this.GetName]§!离开联邦或不再担任联邦领袖，则议案将会自动失效。§!"

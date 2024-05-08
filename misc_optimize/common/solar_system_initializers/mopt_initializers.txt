@@ -1,0 +1,151 @@
+# L-Gate System
+mopt_neighbor_L_Gate_sytem = {
+	class = sc_black_hole
+
+	flags = { hostile_system lgate }
+
+	scaled_spawn_chance = 10
+
+	planet = {
+		class = star
+		orbit_distance = 0
+		init_effect = {
+			clear_deposits = yes
+			set_deposit = d_dark_matter_deposit_3
+		}
+	}
+
+	change_orbit = 60
+
+	planet = {
+		count = { min = 0 max = 1 }
+		class = "pc_broken"
+		size = { min = 10 max = 15 }
+
+		init_effect = { prevent_anomaly = yes }
+	}
+
+	change_orbit = 30
+
+	planet = {
+		count = { min = 0 max = 1 }
+		class = "pc_barren_cold"
+		size = { min = 10 max = 20 }
+	}
+
+	init_effect = {
+		spawn_megastructure = {
+			type = lgate_base
+			orbit_angle = 225
+			orbit_distance = 30
+		}
+	}
+}
+
+@base_moon_distance = 6
+
+#Spawn Planet and System
+mopt_near_home_legendary_leader_start_site = {
+	name = "NAME_legendary_crash_site"
+	class = "rl_standard_stars"
+
+
+	flags = { legendary_leader_spawn_system mopt_system }
+	init_effect = {
+		random_system = {
+			spawn_system = {
+				min_distance = 10
+				max_distance = 30
+				max_jumps = 0
+				initializer = "legendary_leader_1st_site"
+				hyperlane = yes
+				is_discovered = yes
+			}
+		}
+		reroll_random = yes
+		random_system = {
+			spawn_system = {
+				min_distance = 10
+				max_distance = 30
+				max_jumps = 0
+				initializer = "legendary_leader_2nd_site"
+				hyperlane = yes
+				is_discovered = yes
+			}
+		}
+		reroll_random = yes
+		random_system = {
+			spawn_system = {
+				min_distance = 10
+				max_distance = 30
+				max_jumps = 0
+				initializer = "legendary_leader_3rd_site"
+				hyperlane = yes
+				is_discovered = yes
+			}
+		}
+	}
+
+	planet = {
+		name = "NAME_legendary_crash_site"
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 35
+		has_ring = no
+	}
+
+	change_orbit = 60
+
+	planet = {
+		class = pc_molten
+		orbit_angle = 15
+		size = 16
+
+		change_orbit = @base_moon_distance
+	}
+
+	change_orbit = 15
+
+	planet = {
+		count = { min = 3 max = 6 }
+		class = pc_asteroid
+		size = { min = 2 max = 3 }
+		orbit_distance = { min = 4 max = 10 }
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	change_orbit = 10
+
+	planet = {
+		count = 2
+		orbit_distance = { min = 30 max = 60 }
+		class = pc_barren_cold
+		orbit_angle = { min = 90 max = 270 }
+		size = { min = 18 max = 24 }
+
+		change_orbit = @base_moon_distance
+
+		moon = {
+			count = { min = 1 max = 2 }
+			size = { min = 8 max = 10 }
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = { min = 10 max = 12 }
+		}
+	}
+
+	change_orbit = 30
+
+	planet = {
+		class = pc_frozen
+		orbit_angle = { min = 90 max = 270 }
+		size = { min = 28 max = 36 }
+		flags = { legendary_leader_meet_point legendary_leader_planet }
+
+		init_effect = {
+			clear_deposits = yes
+			prevent_anomaly = yes
+			save_global_event_target_as = exakeides_planet
+		}
+	}
+}

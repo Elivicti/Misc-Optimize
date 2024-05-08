@@ -1,0 +1,16 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_resolution_mopt_custodian_federation_control"
+		texturefile = "gfx/interface/icons/resolutions/resolution_mopt_custodian_federation_control.dds"
+	}
+	spriteType = {
+		name = "GFX_resolution_mopt_imperial_federation_control"
+		texturefile = "gfx/interface/icons/resolutions/resolution_mopt_imperial_federation_control.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ap_mopt_world_shaper_hive_mind"
+		texturefile = "gfx/interface/icons/ascension_perks/ap_world_shaper.dds"
+		alwaystransparent = yes
+	}
+}

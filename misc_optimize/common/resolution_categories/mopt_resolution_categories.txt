@@ -1,0 +1,30 @@
+# Example Resolution Cateogry
+# NOTE: Resolution types specified here need to exist in the type database!
+
+#example_category = {
+#	group = none			# determines how the categories are grouped in the UI
+#	icon = "key"			# sets icon in the dropdown menu
+#	resolution_types = {
+#		"resolution_type_1"
+#		"resolution_type_2"
+#		"resolution_type_3"
+#	}
+#}
+
+resolution_category_mopt_custodian_federation_control = {
+	group = custodianship
+	icon = "GFX_resolution_mopt_custodian_federation_control"
+
+	resolution_types = {
+		resolution_mopt_dissolve_federation
+	}
+}
+
+resolution_category_mopt_imperial_federation_control = {
+	group = galactic_empire
+	icon = "GFX_resolution_mopt_imperial_federation_control"
+
+	resolution_types = {
+		resolution_mopt_dissolve_federation_imperial
+	}
+}

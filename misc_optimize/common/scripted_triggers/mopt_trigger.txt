@@ -1,0 +1,54 @@
+#
+mopt_is_truce_country_marked = {
+	OR = {
+		has_country_flag = flag_mopt_truce_country_mark_1
+		has_country_flag = flag_mopt_truce_country_mark_2
+		has_country_flag = flag_mopt_truce_country_mark_3
+		has_country_flag = flag_mopt_truce_country_mark_4
+		has_country_flag = flag_mopt_truce_country_mark_5
+		has_country_flag = flag_mopt_truce_country_mark_6
+	}
+}
+
+# this = country
+mopt_is_not_ai_or_current_player = {
+	is_ai = no
+	NOT = { is_same_value = $current$ }
+}
+
+# this = country
+mopt_is_valid_judgement_target = {
+	custom_tooltip = {
+		fail_text = mopt_requires_ai_country
+		is_ai = yes
+	}
+	custom_tooltip = {
+		fail_text = mopt_requires_default_country_type
+		is_country_type = default
+	}
+}
+
+# this = country
+mopt_is_potential_judgement_participant = {
+	is_ai = no
+	NOT = { has_country_flag = flag_mopt_judgement_participant }
+}
+
+# this = country
+mopt_requires_planet_pop_max_threshold_variable = {
+	custom_tooltip = {
+		fail_text = mopt_requires_planet_pop_max_threshold_variable_bigger_than_$value$
+		check_variable = {
+			which = v_mopt_judgement_planet_pop_max_threshold
+			value > $value$
+		}
+	}
+}
+
+# this = country
+mopt_has_world_shaper_ap = {
+	OR = {
+		has_ascension_perk = ap_world_shaper
+		has_ascension_perk = ap_mopt_world_shaper_hive_mind
+	}
+}

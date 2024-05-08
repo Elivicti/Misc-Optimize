@@ -1,0 +1,33 @@
+mopt_opinion_dissoved_federation = {
+	opinion = -100
+
+	accumulative = yes
+	growth = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = opinion
+			parameters = { who = from }
+			mult = 0.02
+			mode = add
+		}
+		min = 1
+		max = 5
+	}
+}
+
+mopt_opinion_dissoved_federation_leader = {
+	opinion = -200
+
+	accumulative = yes
+	growth = {
+		base = 2
+		complex_trigger_modifier = {
+			trigger = opinion
+			parameters = { who = from }
+			mult = 0.01
+			mode = add
+		}
+		min = 1
+		max = 5
+	}
+}
