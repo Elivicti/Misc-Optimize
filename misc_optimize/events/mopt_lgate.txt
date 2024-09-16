@@ -162,30 +162,3 @@ country_event = { # 修改L星门内容
 		name = mopt_lgate.0.exit
 	}
 }
-
-country_event = { # 
-	id = mopt_lgate.11
-	
-	hide_window = yes
-
-	is_triggered_only = yes
-	trigger = { is_ai = no }
-
-
-	immediate = {
-		begin_event_chain = { 
-			event_chain = chain_lgate_location
-			target = root
-		}
-		every_system = {
-			limit = { has_star_flag = lgate }
-			save_event_target_as = lgate_system
-
-			enable_special_project = {
-				name = SP_LGATE_POSITION
-				owner = root
-				location = this.star
-			}
-		}
-	}
-}

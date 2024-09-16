@@ -91,11 +91,13 @@
  
  chain_lgate_location_title:0 "L-星门坐标"
  chain_lgate_location_desc:0 "我老婆家门呢？"
+ mopt_requires_lgate_enabled: "$TRIGGER_FAIL$需要在开局设置中启用L-星门"
  
  edict_mopt_lgate_location:0 "定位$chain_lgate_location_title$"
  edict_mopt_lgate_location_desc:0 "$chain_lgate_location_desc$"
- edict_mopt_lgate_location_disable:0 "取消定位$chain_lgate_location_title$"
- edict_mopt_lgate_location_disable_desc:0 ""
+
+ mopt_lgate_location_tooltip: "开启一个用于定位L-星门的事件链"
+ mopt_lgate_location_disable_tooltip: "关闭用于定位L-星门的事件链"
 
  SP_LGATE_POSITION:0 "位于§Y[lgate_system.GetName]§!的L-星门"
  SP_LGATE_POSITION_DESC:0 "老婆家门"
@@ -134,8 +136,8 @@
  edict_mopt_spawn_horizonsignal_desc:0 "虫妈！我的虫妈！没有你我可怎么活啊！"
  edict_mopt_horizonsignal_location:0 "定位视界信号"
  edict_mopt_horizonsignal_location_desc:0 "虫妈！我的虫妈！没有你我可怎么活啊！"
- edict_mopt_horizonsignal_location_disable:0 "取消定位视界信号"
- edict_mopt_horizonsignal_location_disable_desc:0 "再见了虫妈，今晚我就要远航~"
+ mopt_horizonsignal_location_tooltip: "开启一个用于定位视界信号的事件链"
+ mopt_horizonsignal_location_disable_tooltip: "关闭用于定位视界信号的事件链"
  poi_mopt_horizonsignal_name:0 "视界信号"
  poi_mopt_horizonsignal_desc:0 "嘿嘿，虫妈，嘿嘿……嘿嘿，虫妈，我来了！"
  chain_horizonsignal_location_title:0 "视界信号"

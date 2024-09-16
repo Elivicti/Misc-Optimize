@@ -19,37 +19,47 @@ mopt_lgate_content = {
 
 mopt_lgate_location = {
 	icon = "GFX_edict_type_time"
-	length = 1
+	length = -1
 
 	potential = {
 		is_ai = no
-		NOT = { has_event_chain = chain_lgate_location }
-		lgate_enabled = yes
 	}
 
-	effect = {
-		hidden_effect = {
-			country_event = { id = mopt_lgate.11 }
+	allow = {
+		custom_tooltip = {
+			fail_text = mopt_requires_lgate_enabled
+			lgate_enabled = yes
 		}
 	}
 
-	ai_weight = { base = 0 }
-}
+	effect = {
+		if = {
+			limit = { has_event_chain = chain_lgate_location }
+			custom_tooltip = mopt_lgate_location_disable_tooltip
+		}
+		else = {
+			custom_tooltip = mopt_lgate_location_tooltip
+		}
+		hidden_effect = {
+			begin_event_chain = {
+				event_chain = chain_lgate_location
+				target = root
+			}
+			every_system = {
+				limit = { has_star_flag = lgate }
+				save_event_target_as = lgate_system
 
-mopt_lgate_location_disable = {
-	icon = "GFX_edict_type_time"
-	length = 1
-
-	potential = {
-		is_ai = no
-		has_event_chain = chain_lgate_location
-		lgate_enabled = yes
+				enable_special_project = {
+					name = SP_LGATE_POSITION
+					owner = root
+					location = this.star
+				}
+			}
+		}
 	}
 
-	effect = {
-		hidden_effect = {
-			end_event_chain = chain_lgate_location
-		}
+	on_disabled = {
+		end_event_chain = chain_lgate_location
 	}
 
 	ai_weight = { base = 0 }
@@ -139,10 +149,6 @@ mopt_spawn_horizonsignal = {
 	effect = {
 		hidden_effect = {
 			set_global_flag = g_flag_mopt_horizonsignal_spawned
-			begin_event_chain = {
-				event_chain = chain_horizonsignal_location
-				target = this
-			}
 			random_system = {
 				limit = {
 					is_star_class = sc_black_hole
@@ -154,14 +160,6 @@ mopt_spawn_horizonsignal = {
 					}
 				}
 				set_star_flag = horizonsignal_spawn
-				star = { save_event_target_as = horizonsignal_blackhole }
-			}
-			create_point_of_interest = {
-				id = poi_mopt_horizonsignal
-				name = poi_mopt_horizonsignal_name
-				desc = poi_mopt_horizonsignal_desc
-				event_chain = chain_horizonsignal_location
-				location = event_target:horizonsignal_blackhole
 			}
 		}
 	}
@@ -169,11 +167,10 @@ mopt_spawn_horizonsignal = {
 
 mopt_horizonsignal_location = {
 	icon = "GFX_planet_type_black_hole"
-	length = 1
+	length = -1
 
 	potential = {
 		is_ai = no
-		NOT = { has_event_chain = chain_horizonsignal_location }
 		has_global_flag = g_flag_mopt_horizonsignal_spawned
 	}
 
@@ -182,6 +179,13 @@ mopt_horizonsignal_location = {
 	}
 
 	effect = {
+		if = {
+			limit = { has_event_chain = chain_horizonsignal_location }
+			custom_tooltip = mopt_horizonsignal_location_disable_tooltip
+		}
+		else = {
+			custom_tooltip = mopt_horizonsignal_location_tooltip
+		}
 		hidden_effect = {
 			begin_event_chain = {
 				event_chain = chain_horizonsignal_location
@@ -201,23 +205,7 @@ mopt_horizonsignal_location = {
 		}
 	}
 
-	ai_weight = { base = 0 }
-}
-
-mopt_horizonsignal_location_disable = {
-	icon = "GFX_planet_type_black_hole"
-	length = 1
-
-	potential = {
-		is_ai = no
-		has_event_chain = chain_horizonsignal_location
-	}
-
-	allow = {
-		hidden_trigger = { is_ai = no }
-	}
-
-	effect = {
+	on_disabled = {
 		hidden_effect = {
 			random_system = {
 				limit = {
