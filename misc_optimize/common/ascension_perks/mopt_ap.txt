@@ -23,7 +23,7 @@ ap_mopt_world_shaper_hive_mind = {
 			has_ascension_perk = ap_world_shaper
 			has_ascension_perk = ap_mopt_world_shaper_hive_mind
 		}
-		has_authority = auth_hive_mind
+		is_hive_empire = yes
 	}
 
 	ai_weight = {
