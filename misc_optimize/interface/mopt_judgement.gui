@@ -155,7 +155,7 @@ guiTypes = {
 			quadTextureSprite = "GFX_event_button_452"
 			font = "cg_16b"
 			text = "mopt_judgement_gui_target_desc"
-			size = { width = 480 height = 50 }
+			size = { x = 480 y = 50 }
 			position = { x = 12 y = 400 }
 		}
 
