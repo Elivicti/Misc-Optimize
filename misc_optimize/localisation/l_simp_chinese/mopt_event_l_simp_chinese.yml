@@ -82,6 +82,10 @@
  mopt_precursors.0.baol.tooltip:0 "活跃在约700万年前的古老植物蜂群文明，奉承和平理念，以善于改造星球著称。"
  mopt_precursors.0.zroni:0 "泽洛"
  mopt_precursors.0.zroni.tooltip:0 "活跃在约???年前的古老文明，这个种族曾经无限接近神的领域。"
+ mopt_precursors.0.inetian: "因内特贸易体"
+ mopt_precursors.0.inetian.tooltip: "活跃在约数百万年前的古老文明，奉承平等理念，曾为保护自己的贸易路线而试图掌握“上帝的玩具”。"
+ mopt_precursors.0.adakkaria: "阿达卡利亚"
+ mopt_precursors.0.adakkaria.tooltip: "活跃在约???年前的古老文明，却因欲望而在痛苦、愤怒、悲伤与恐惧中灭亡。"
 
  mopt_precursors.0.cancel:0 "放弃"
  mopt_precursors.0.cancel.tooltip:0 "力量总会有代价的，不是吗？"

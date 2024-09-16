@@ -19,15 +19,7 @@ country_event = {
 	trigger = {
 		# always = no ############################
 		is_ai = no
-		NOR = {
-			has_country_flag = vultaum_intro		# 沃陶姆
-			has_country_flag = yuht_intro			# 尤特
-			has_country_flag = first_league_intro	# 第一联盟
-			has_country_flag = irassian_intro		# 伊拉斯人
-			has_country_flag = cybrex_intro			# 赛博勒克斯
-			has_country_flag = zroni_intro			# 泽洛
-			has_country_flag = baol_intro			# 巴奥
-		}
+		has_precursor_intro = no
 	}
 
 	option = {
@@ -93,6 +85,24 @@ country_event = {
 			set_country_flag = flag_mopt_fixed_zroni_intro
 			set_country_flag = zroni_intro
 			mopt_set_precursor_flag = { precursor_flag = precursor_zroni_1 }
+		}
+	}
+	option = {
+		name = mopt_precursors.0.inetian
+		custom_tooltip = mopt_precursors.0.inetian.tooltip
+		hidden_effect = {
+			set_country_flag = flag_mopt_fixed_inetian_intro
+			set_country_flag = inetian_intro
+			mopt_set_precursor_flag = { precursor_flag = precursor_inetian }
+		}
+	}
+	option = {
+		name = mopt_precursors.0.adakkaria
+		custom_tooltip = mopt_precursors.0.adakkaria.tooltip
+		hidden_effect = {
+			set_country_flag = flag_mopt_fixed_adakkaria_intro
+			set_country_flag = adakkaria_intro
+			mopt_set_precursor_flag = { precursor_flag = precursor_adakkaria }
 		}
 	}
 	option = {
@@ -476,3 +486,123 @@ ship_event = {
 		}
 	}
 }
+
+# Precursor Weather Manipulators Intro
+ship_event = {
+	id = mopt_precursors.800
+
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		exists = owner
+		solar_system = {
+			NOR = {
+				has_star_flag = precursor_system
+				is_same_value = root.owner.capital_scope.solar_system
+			}
+			has_star_flag = precursor_inetian
+		}
+		owner = {
+			is_ai = no
+			has_country_flag = flag_mopt_fixed_inetian_intro
+		}
+		FROM = {
+			has_anomaly = no
+
+			# Only on planets that don't have something else going on.
+			NOR = {
+				has_planet_flag = precursor_world
+				exists = archaeological_site
+			}
+
+			# needs to be a barren planet.
+			OR = {
+				is_planet_class = pc_barren
+				is_planet_class = pc_barren_cold
+			}
+		}
+	}
+
+	weight_multiplier = {
+		factor = 1
+		modifier = {
+			factor = @origin_shoulders_multiplier
+			owner = {
+				has_origin = origin_shoulders_of_giants
+				has_country_flag = origin_shoulders_closure
+			}
+		}
+	}
+
+	immediate = {
+		owner = {
+			set_country_flag = inetian_intro
+			country_event = { id = story.5 days = 30 }
+		}
+
+		from = {
+			add_anomaly = {
+				category = STORMS_PREC_WM_ONE
+				target = prev.owner
+			}
+		}
+	}
+}
+
+# adAkkaria Introduction
+ship_event = {
+	id = mopt_precursors.900
+
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		solar_system = {
+			has_star_flag = precursor_adakkaria
+			NOT = { is_same_value = root.owner.capital_scope.solar_system }
+		}
+		owner = {
+			is_ai = no
+			has_country_flag = flag_mopt_fixed_adakkaria_intro
+		}
+		FROM = {
+			NOR = {
+				has_anomaly = yes
+				is_star = yes
+				can_have_habitable_deposits = yes
+
+				has_planet_flag = precursor_world
+				exists = archaeological_site
+				is_planet_class = pc_gas_giant
+			}
+		}
+	}
+
+	weight_multiplier = {
+		factor = 1
+		modifier = {
+			factor = @origin_shoulders_multiplier
+			owner = {
+				has_origin = origin_shoulders_of_giants
+				has_country_flag = origin_shoulders_closure
+			}
+		}
+	}
+
+	immediate = {
+		owner = {
+			set_country_flag = adakkaria_intro
+			country_event = { id = story.5 days = 30 }
+		}
+
+		from = {
+			add_anomaly = {
+				category = STORMS_PREC_ONE
+				target = owner
+			}
+		}
+	}
+}
+
+
