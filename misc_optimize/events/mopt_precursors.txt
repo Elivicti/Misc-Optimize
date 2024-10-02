@@ -537,6 +537,7 @@ ship_event = {
 
 	immediate = {
 		owner = {
+			remove_country_flag = flag_mopt_fixed_inetian_intro
 			set_country_flag = inetian_intro
 			country_event = { id = story.5 days = 30 }
 		}
@@ -592,6 +593,7 @@ ship_event = {
 
 	immediate = {
 		owner = {
+			remove_country_flag = flag_mopt_fixed_adakkaria_intro
 			set_country_flag = adakkaria_intro
 			country_event = { id = story.5 days = 30 }
 		}
