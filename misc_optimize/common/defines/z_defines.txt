@@ -20,4 +20,5 @@ NGameplay = {
 	CUSTODIAN_TERM_LIMIT_DAYS = 5400		#10800	# 监管人在位时长
 	CUSTODIAN_TERM_LIMIT_EXPIRATION_MESSAGE_DAYS = 912	#1825	# 距离监管人在位时长快结束还有多久时发送通知
 
+	POLICY_YEARS = 5 #10     # 设置政策的冷却
 }
