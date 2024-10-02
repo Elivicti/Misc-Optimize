@@ -1,10 +1,45 @@
 # L-Gate System
-mopt_neighbor_L_Gate_sytem = {
+mopt_neighbor_L_Gate_sytem_init = {
 	class = sc_black_hole
 
-	flags = { hostile_system lgate }
+	flags = { hostile_system lgate mopt_guaranteed_system }
 
-	scaled_spawn_chance = 10
+	max_instances = 12
+	usage = misc_system_init
+	usage_odds = {
+		base = 0
+		modifier = {
+			add = 9999
+			any_country = {
+				is_ai = no
+				capital_scope.solar_system = {
+					NOT = {
+						any_system = {
+							distance = {
+								source = prev
+								min_jumps = 1
+								max_jumps = 6
+							}
+							has_star_flag = lgate
+						}
+					}
+					distance = {
+						source = prevprev
+						min_jumps = 3
+						max_jumps = 4
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 0
+			NOR = {
+				has_distar = yes
+				lgate_enabled = yes
+			}
+		}
+	}
 
 	planet = {
 		class = star
@@ -31,6 +66,52 @@ mopt_neighbor_L_Gate_sytem = {
 		count = { min = 0 max = 1 }
 		class = "pc_barren_cold"
 		size = { min = 10 max = 20 }
+		init_effect = { prevent_anomaly = yes }
+	}
+
+	init_effect = {
+		spawn_megastructure = {
+			type = lgate_base
+			orbit_angle = 225
+			orbit_distance = 30
+		}
+	}
+}
+
+mopt_neighbor_L_Gate_sytem_spawned = {
+	class = sc_black_hole
+
+	flags = {
+		hostile_system lgate
+		mopt_guaranteed_system mopt_event_spawned
+	}
+
+	planet = {
+		class = star
+		orbit_distance = 0
+		init_effect = {
+			clear_deposits = yes
+			set_deposit = d_dark_matter_deposit_3
+		}
+	}
+
+	change_orbit = 60
+
+	planet = {
+		count = { min = 0 max = 1 }
+		class = "pc_broken"
+		size = { min = 10 max = 15 }
+
+		init_effect = { prevent_anomaly = yes }
+	}
+
+	change_orbit = 30
+
+	planet = {
+		count = { min = 0 max = 1 }
+		class = "pc_barren_cold"
+		size = { min = 10 max = 20 }
+		init_effect = { prevent_anomaly = yes }
 	}
 
 	init_effect = {

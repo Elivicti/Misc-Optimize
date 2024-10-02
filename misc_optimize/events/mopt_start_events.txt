@@ -45,7 +45,7 @@ country_event = {
 							distance = {
 								source = prev
 								min_jumps = 1
-								max_jumps = 5
+								max_jumps = 6
 							}
 							has_star_flag = lgate
 						}
@@ -60,7 +60,7 @@ country_event = {
 						}
 					}
 					spawn_system = {
-						initializer = "mopt_neighbor_L_Gate_sytem"
+						initializer = "mopt_neighbor_L_Gate_sytem_spawned"
 						min_distance = 10
 						max_distance = 30
 						max_jumps = 0
