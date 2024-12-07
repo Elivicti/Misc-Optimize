@@ -34,9 +34,9 @@ mopt_neighbor_L_Gate_sytem_init = {
 
 		modifier = {
 			factor = 0
-			NOR = {
-				has_distar = yes
-				lgate_enabled = yes
+			OR = {
+				has_distar = no
+				lgate_enabled = no
 			}
 		}
 	}
