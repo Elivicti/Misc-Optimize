@@ -186,7 +186,7 @@ fleet_event = {
 		NOT = { has_global_flag = flag_g_mopt_teleporter_triggered }
 		exists = from
 		from = { has_star_flag = legendary_leader_spawn_system_teleporter }
-		any_owned_ship = { is_ship_class = shipclass_science_ship }
+		is_ship_class = shipclass_science_ship
 	}
 
 	location = event_target:teleport_target.solar_system
@@ -197,24 +197,12 @@ fleet_event = {
 			random_system = {
 				limit = { has_star_flag = legendary_leader_spawn_system }
 				save_event_target_as = legendary_leader_system
-				random_neighbor_system = {
-					limit = {
-						OR = {
-							NOT = { exists = space_owner }
-							space_owner = { NOT = { is_hostile = root.owner } }
-						}
-						any_fleet_in_system = {
-							owner = { NOT = { is_hostile = root.owner } }
-						}
-						any_system_planet = { is_star = no }
-					}
-					random_system_planet = {
-						limit = { is_star = no }
-						save_event_target_as = teleport_target
-					}
+				random_system_planet = {
+					limit = { is_star = no }
+					save_event_target_as = teleport_target
 				}
 			}
-			owner = { set_visited = event_target:teleport_target.solar_system }
+			owner = { set_visited = event_target:legendary_leader_system }
 		}
 	}
 
@@ -222,9 +210,12 @@ fleet_event = {
 		name = mopt_start.2010.a
 		custom_tooltip = mopt_start.2010.a.tooltip
 		set_location = event_target:teleport_target
-		owner = {
-			hidden_effect = {
-				set_visited = event_target:legendary_leader_system
+		hidden_effect = {
+			random_owned_ship = {
+				ship_event = {
+					id = paragon.3100
+					scopes = { from = event_target:legendary_leader_system }
+				}
 			}
 		}
 	}
