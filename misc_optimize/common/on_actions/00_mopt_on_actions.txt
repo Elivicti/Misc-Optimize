@@ -35,3 +35,19 @@ on_entering_system_fleet = {
 		mopt_start.2010
 	}
 }
+
+# Scope: Ship Event
+#A ship has been built
+# Root = Ship
+# From = Planet
+on_ship_built = {
+	events = {
+		mopt_juggernaut.100
+	}
+}
+# Root = Ship
+on_ship_upgraded = {
+	events = {
+		mopt_juggernaut.100
+	}
+}

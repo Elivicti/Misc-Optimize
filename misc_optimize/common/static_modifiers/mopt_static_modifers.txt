@@ -15,3 +15,7 @@ mopt_business_accidents = {
 	icon = "gfx/interface/icons/planet_modifiers/mod_planet_building_cost_mult.dds"
 	planet_branch_offices_cost_mult = 0.10
 }
+
+mopt_juggernaut_shipyard = {
+	starbase_shipyard_capacity_add = 1
+}

@@ -1,0 +1,112 @@
+namespace = mopt_juggernaut
+
+event = {
+	id = mopt_juggernaut.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		event_target:global_event_country = {
+			set_variable = {
+				which = v_mopt_juggernaut_shipyard_count
+				value = @mopt_default_juggernaut_shipyard_count
+			}
+		}
+	}
+}
+
+country_event = {
+	id = mopt_juggernaut.50
+	title = mopt_juggernaut.50.name
+	desc = mopt_juggernaut.50.desc
+
+	is_triggered_only = yes
+
+	diplomatic = yes
+	diplomatic_title = "mopt_juggernaut.50.name"
+	force_open = yes
+	picture_event_data = {
+		portrait = root
+		planet_background = root
+		city_level = root
+	}
+	custom_gui = mopt_juggernaut_default_shipyard_count_gui
+
+	option = {
+		name = mopt_juggernaut.50.return
+	}
+
+	option = {
+		name = mopt_juggernaut.50.sep
+		allow = {
+			custom_tooltip = {
+				fail_text = mopt_juggernaut.50.sep.tooltip
+				always = no
+			}
+		}
+	}
+
+	option = {
+		name = mopt_juggernaut.add_1
+		is_dialog_only = yes
+		response_text = mopt_juggernaut.50.desc
+		hidden_effect = {
+			event_target:global_event_country = {
+				change_variable = {
+					which = v_mopt_juggernaut_shipyard_count
+					value = 1
+				}
+			}
+		}
+	}
+	option = {
+		name = mopt_juggernaut.minus_1
+		is_dialog_only = yes
+		response_text = mopt_juggernaut.50.desc
+		hidden_effect = {
+			event_target:global_event_country = {
+				change_variable = {
+					which = v_mopt_juggernaut_shipyard_count
+					value = -1
+				}
+			}
+		}
+	}
+	option = {
+		name = mopt_juggernaut.reset
+		is_dialog_only = yes
+		response_text = mopt_juggernaut.50.desc
+		hidden_effect = {
+			event_target:global_event_country = {
+				set_variable = {
+					which = v_mopt_juggernaut_shipyard_count
+					value = @mopt_default_juggernaut_shipyard_count
+				}
+			}
+		}
+	}
+
+}
+
+
+# on_ship_built/on_ship_upgraded
+ship_event = {
+	id = mopt_juggernaut.100
+	hide_window = yes
+
+	is_triggered_only = yes
+	trigger = {
+		is_ship_size = juggernaut
+		owner = { NOT = { has_edict = mopt_disable_juggernaut_shipyard_effect } }
+	}
+
+	immediate = {
+		fleet.starbase = {
+			remove_modifier = mopt_juggernaut_shipyard
+			add_modifier = {
+				modifier = mopt_juggernaut_shipyard
+				mult = prev.value:mopt_juggernaut_shipyards_bonus
+			}
+		}
+	}
+}

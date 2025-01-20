@@ -1,0 +1,8 @@
+
+
+# this = ship
+mopt_juggernaut_shipyards_bonus = {
+	base = 0
+	add = modifier:mopt_juggernaut_shipyard_capacity_add
+	subtract = event_target:global_event_country.v_mopt_juggernaut_shipyard_count
+}

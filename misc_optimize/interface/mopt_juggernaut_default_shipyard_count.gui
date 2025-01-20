@@ -1,0 +1,179 @@
+guiTypes = {
+	### EVENT OPTION ###
+
+	### EVENT WINDOW ###
+	containerWindowType = {
+		name = "mopt_juggernaut_default_shipyard_count_gui"
+		orientation = center
+		origo = center
+		moveable = yes
+		size = { width = 500 height = 500 }
+		background = {
+			name = "background"
+			quadTextureSprite = "GFX_tile_large_bg_plain"
+		}
+		iconType = {
+			name = "hex_bg_left"
+			position = { x = -79 y = 22 }
+			spriteType = "GFX_hex_center_bg"
+			orientation = center_up
+			centerPosition = yes
+			alwaysTransparent = yes
+		}
+		iconType = {
+			name = "hex_bg_right"
+			position = { x = 79 y = 22 }
+			spriteType = "GFX_hex_center_bg"
+			orientation = center_up
+			centerPosition = yes
+			alwaysTransparent = yes
+		}
+		iconType = {
+			name = "header_line"
+			position = { x = 0 y = 42 }
+			spriteType = "GFX_line_center"
+			orientation = center_up
+			centerPosition = yes
+			alwaysTransparent = yes
+		}
+		buttonType = {
+			name = "focus_button"
+			position = { x = -50 y = 650 }
+			orientation = upper_right
+			spriteType = "GFX_fleetview_focus"
+			buttonFont = "cg_16b"
+			shortcut = "q"
+		}
+		
+		instantTextBoxType = { name = "heading" font = "malgun_goth_24" position = { x = -1120 y = -115 } }
+		buttonType = { name = "tts_button" position = { x = 46600 y = 639 } spriteType = "GFX_button_tts_start" }
+		buttonType = { name = "confirm_button" position = { x = -1117 y = -1145 } quadTextureSprite = "GFX_standard_button_142_34_button" }
+		### PORTRAIT ###
+		containerWindowType = {
+			name = "portrait_background"
+			position = { x = -1117 y = -1145 }
+			size = { width = 0 height = 0 } 	# hide portrait window
+			iconType = { name = "event_picture" spriteType = "GFX_diplomacy_portrait_frame" }
+			iconType = { name = "portrait" spriteType = "GFX_portrait_character" }
+		}
+		containerWindowType = {
+			name = "portrait"
+			position = { x = -1117 y = -1145 }
+			size = { width = 0 height = 0 }
+			iconType = { name = "portrait" spriteType = "GFX_portrait_gamesetup_mask" }
+			iconType = { name = "black_frame" spriteType = "GFX_diplomacy_portrait_shadow_frame" }
+			iconType = { name = "stripes_1" spriteType = "GFX_diplomacy_stripes_2" }
+			iconType = { name = "city_frame" spriteType = "GFX_diplomacy_portrait_frame" }
+		}
+		### EMPIRE INFO ###
+		iconType = { name = "empire_info_bg" spriteType = "GFX_diplomacy_dark_fade_bg" position = { x = -1117 y = -1145 } }
+		instantTextBoxType = { name = "empire_name" font = "malgun_goth_24" position = { x = -1117 y = -1145 } }
+		instantTextBoxType = { name = "empire_government_type" font = "cg_16b" position = { x = -1117 y = -1145 } }
+		instantTextBoxType = { name = "empire_personality_type" font = "cg_16b" position = { x = -1117 y = -1145 } }
+		overlappingElementsBoxType = { name = "empire_ethics_icons" position = { x = -1145 y = -11138 } }
+		iconType = { name = "empire_flag" spriteType = "GFX_empire_flag_128" position = { x = -1125 y = -11235 } }
+		containerWindowType = {
+			name = "leader_details"
+			position = { x = -1125 y = -1175 }
+			containerWindowType = { name = "empire_traits_box" }
+			instantTextBoxType = { name = "empire_traits_label" font = "cg_16b" }
+			overlappingElementsBoxType = { name = "leader_traits" }
+			instantTextBoxType = { name = "leader_name" font = "cg_16b" }
+			instantTextBoxType = { name = "leader_species" font = "cg_16b" }
+		}
+		### OPINION
+		containerWindowType = {
+			name = "opinion_window"
+			position = { x = -1127 y = -11110 }
+			size = { width = 94 height = 30 }
+			iconType = { name = "their_opinion_icon" spriteType = "GFX_diplomacy_opinion" }
+			instantTextBoxType = { name = "their_opinion" font = "cg_16b" }
+		}
+
+		### DESCRIPTION ###
+		containerWindowType = {
+			name = "alien_message_background"
+			#position = { x = 20 y = 441 }
+			position = { x = -240 y = 50 }
+			size = { width = 480 height = 220 }
+			orientation = center_up
+			background = {
+				name = "ethics_bg"
+				spriteType = "GFX_tiles_dark_area_cut_8"
+			}
+		}
+		instantTextBoxType = {
+			name = "alien_message"
+			font = "cg_16b"
+			#position = { x = 30 y = 451 }
+			position = { x = -230 y = 60 }
+			orientation = center_up
+			maxWidth = 460
+			maxHeight = 200
+			format = left
+			scrollbartype = "standardtext_slider_small"
+			borderSize = { x = 0 y = 0 }
+		}
+
+		effectButtonType = {
+			name = "mopt_juggernaut_shipyard_count"
+			effect = mopt_btn_always_on
+
+			spriteType = "GFX_invisible"
+			position = { x = 20 y = 239 }
+			size = { x = 460 y = 100 }
+			format = left
+			vertical_alignment = top
+			alwaysTransparent = yes
+			text = "mopt_juggernaut_shipyard_count_desc"
+			font = "cg_16b"
+			multiline = yes
+		}
+		#
+		# effectButtonType = {
+		# 	name = "mopt_judgement_gui_target"
+		# 	effect = mopt_btn_judgement_target
+		#
+		# 	quadTextureSprite = "GFX_event_button_452"
+		# 	font = "cg_16b"
+		# 	text = "mopt_judgement_gui_target_desc"
+		# 	size = { x = 480 y = 50 }
+		# 	position = { x = 12 y = 400 }
+		# }
+
+		### EVENT DIPLO ###
+		containerWindowType = {
+			name = "EVENT_DIPLO"
+			#position = { x = 0 y = 410 }
+			position = { x = 0 y = 270 }
+			size = { width = 100% height = 100% }
+			instantTextBoxType = {
+				name = "action_title"
+				font = "malgun_goth_24"
+				position = { x = -240 y = -260 }
+				orientation = center_up
+				format = center
+				maxWidth = 480
+				alwaysTransparent = yes
+			}
+			instantTextBoxType = {
+				name = "action_desc"
+				font = "malgun_goth_24"
+				position = { x = 51000 y = 0 }
+				maxWidth = 480
+				maxHeight = 180
+				format = center
+				alwaysTransparent = yes
+				text_color_code = "H"
+			}
+			listboxType = {
+				name = "option_list"
+				position = { x = 10 y = 0 }
+				size = { x = 480 y = 240 }
+
+				scrollbartype = "standardlistbox_slider"
+				borderSize = { x = 0 y = 0 }
+			}
+		}
+	}
+}

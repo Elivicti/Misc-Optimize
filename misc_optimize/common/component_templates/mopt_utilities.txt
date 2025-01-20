@@ -1,0 +1,16 @@
+
+
+utility_component_template = {
+	key = MOPT_JUGGERNAUT_SHIPYARD
+	size = aux
+	icon = "GFX_starbase_shipyard"
+	icon_frame = 1
+
+	component_set = MOPT_JUGGERNAUT_SHIPYARD
+
+	ship_modifier = {
+		mopt_juggernaut_shipyard_capacity_add = 2
+	}
+
+	size_restriction = { juggernaut }
+}

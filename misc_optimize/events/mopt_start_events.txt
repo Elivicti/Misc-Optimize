@@ -16,6 +16,7 @@ event = {
 			country_event = { id = mopt_start.2000					} # legendary_leader_spawn_system
 		 	country_event = { id = mopt_starbase.0		days = 7200	} # give tech_starbase_2
 			country_event = { id = mopt_precursors.0	days = 15	}
+			country_event = { id = mopt_juggernaut.1    days = 1    }
 		}
 		if = {	# 视界信号全局标识
 			limit = { any_system = { has_star_flag = horizonsignal_spawn } }

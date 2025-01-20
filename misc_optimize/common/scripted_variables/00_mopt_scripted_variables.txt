@@ -1,0 +1,4 @@
+
+
+@mopt_placeholder_variable = 0
+@mopt_default_juggernaut_shipyard_count = 2

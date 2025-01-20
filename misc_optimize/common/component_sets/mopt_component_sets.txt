@@ -1,0 +1,5 @@
+
+component_set = {
+	icon = "GFX_starbase_shipyard"
+	key = MOPT_JUGGERNAUT_SHIPYARD
+}

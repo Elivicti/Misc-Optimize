@@ -1,0 +1,6 @@
+mopt_juggernaut_shipyard_capacity_add = {
+	icon = mod_starbase_shipyard_capacity_add
+	category = ship
+	good = yes
+	percentage = no
+}
