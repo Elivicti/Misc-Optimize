@@ -1,5 +1,18 @@
 namespace = mopt_evt
 
+# on_single_player_save_game_load
+event = {
+	id = mopt_evt.1
+	hide_window = yes
+
+	is_triggered_only = yes
+	immediate = {
+		every_country = {
+			country_event = { id = mopt_juggernaut.1 days = 1 }
+		}
+	}
+}
+
 country_event = {
 	id = mopt_evt.1000
 	title = mopt_evt.1000.name
