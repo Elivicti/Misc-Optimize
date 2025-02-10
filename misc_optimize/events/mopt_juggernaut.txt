@@ -1,16 +1,18 @@
 namespace = mopt_juggernaut
 
-event = {
+country_event = {
 	id = mopt_juggernaut.1
 	hide_window = yes
 	is_triggered_only = yes
 
+	trigger = {
+		NOT = { is_variable_set = v_mopt_juggernaut_shipyard_count }
+	}
+
 	immediate = {
-		event_target:global_event_country = {
-			set_variable = {
-				which = v_mopt_juggernaut_shipyard_count
-				value = @mopt_default_juggernaut_shipyard_count
-			}
+		set_variable = {
+			which = v_mopt_juggernaut_shipyard_count
+			value = @mopt_default_juggernaut_shipyard_count
 		}
 	}
 }
@@ -32,6 +34,12 @@ country_event = {
 	}
 	custom_gui = mopt_juggernaut_default_shipyard_count_gui
 
+	immediate = {
+		hidden_effect = {
+			country_event = { id = mopt_juggernaut.1 }
+		}
+	}
+
 	option = {
 		name = mopt_juggernaut.50.return
 	}
@@ -51,11 +59,9 @@ country_event = {
 		is_dialog_only = yes
 		response_text = mopt_juggernaut.50.desc
 		hidden_effect = {
-			event_target:global_event_country = {
-				change_variable = {
-					which = v_mopt_juggernaut_shipyard_count
-					value = 1
-				}
+			change_variable = {
+				which = v_mopt_juggernaut_shipyard_count
+				value = 1
 			}
 		}
 	}
@@ -64,11 +70,9 @@ country_event = {
 		is_dialog_only = yes
 		response_text = mopt_juggernaut.50.desc
 		hidden_effect = {
-			event_target:global_event_country = {
-				change_variable = {
-					which = v_mopt_juggernaut_shipyard_count
-					value = -1
-				}
+			change_variable = {
+				which = v_mopt_juggernaut_shipyard_count
+				value = -1
 			}
 		}
 	}
@@ -77,15 +81,23 @@ country_event = {
 		is_dialog_only = yes
 		response_text = mopt_juggernaut.50.desc
 		hidden_effect = {
-			event_target:global_event_country = {
-				set_variable = {
-					which = v_mopt_juggernaut_shipyard_count
-					value = @mopt_default_juggernaut_shipyard_count
-				}
+			set_variable = {
+				which = v_mopt_juggernaut_shipyard_count
+				value = @mopt_default_juggernaut_shipyard_count
 			}
 		}
 	}
 
+	after = {
+		hidden_effect = {
+			every_owned_fleet = {
+				limit = { is_ship_size = juggernaut }
+				every_owned_ship = {
+					ship_event = { id = mopt_juggernaut.100 }
+				}
+			}
+		}
+	}
 }
 
 

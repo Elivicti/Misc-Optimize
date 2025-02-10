@@ -262,10 +262,12 @@ mopt_disable_juggernaut_shipyard_effect = {
 	potential = { is_ai = no }
 
 	effect = {
-		every_owned_fleet = {
-			limit = { is_ship_size = juggernaut }
-			starbase = {
-				remove_modifier = mopt_juggernaut_shipyard
+		hidden_effect = {
+			every_owned_fleet = {
+				limit = { is_ship_size = juggernaut }
+				starbase = {
+					remove_modifier = mopt_juggernaut_shipyard
+				}
 			}
 		}
 	}

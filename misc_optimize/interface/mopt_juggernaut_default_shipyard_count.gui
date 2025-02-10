@@ -7,7 +7,7 @@ guiTypes = {
 		orientation = center
 		origo = center
 		moveable = yes
-		size = { width = 500 height = 500 }
+		size = { width = 500 height = 620 }
 		background = {
 			name = "background"
 			quadTextureSprite = "GFX_tile_large_bg_plain"
@@ -95,7 +95,7 @@ guiTypes = {
 			name = "alien_message_background"
 			#position = { x = 20 y = 441 }
 			position = { x = -240 y = 50 }
-			size = { width = 480 height = 220 }
+			size = { width = 480 height = 350 }
 			orientation = center_up
 			background = {
 				name = "ethics_bg"
@@ -109,7 +109,7 @@ guiTypes = {
 			position = { x = -230 y = 60 }
 			orientation = center_up
 			maxWidth = 460
-			maxHeight = 200
+			maxHeight = 300
 			format = left
 			scrollbartype = "standardtext_slider_small"
 			borderSize = { x = 0 y = 0 }
@@ -120,7 +120,7 @@ guiTypes = {
 			effect = mopt_btn_always_on
 
 			spriteType = "GFX_invisible"
-			position = { x = 20 y = 239 }
+			position = { x = 20 y = 379 }
 			size = { x = 460 y = 100 }
 			format = left
 			vertical_alignment = top
@@ -145,12 +145,12 @@ guiTypes = {
 		containerWindowType = {
 			name = "EVENT_DIPLO"
 			#position = { x = 0 y = 410 }
-			position = { x = 0 y = 270 }
+			position = { x = 0 y = 400 }
 			size = { width = 100% height = 100% }
 			instantTextBoxType = {
 				name = "action_title"
 				font = "malgun_goth_24"
-				position = { x = -240 y = -260 }
+				position = { x = -240 y = -380 }
 				orientation = center_up
 				format = center
 				maxWidth = 480

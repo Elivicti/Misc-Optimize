@@ -157,14 +157,14 @@
  mod_mopt_juggernaut_shipyard_capacity_add: "$MOD_STARBASE_SHIPYARD_CAPACITY_ADD$"
 
  edict_mopt_disable_juggernaut_shipyard_effect: "禁用主宰船坞修正效果"
- edict_mopt_disable_juggernaut_shipyard_effect_desc: "禁用杂项优化模组的主宰船坞数量修正效果，主宰船坞将恢复为原版效果。"
+ edict_mopt_disable_juggernaut_shipyard_effect_desc: "禁用杂项优化模组的主宰船坞数量修正效果，主宰船坞将恢复为原版效果。\n\n取消禁用时，允许玩家调整默认主宰船坞数。\n\n§H注意：§!使用法令进行调整后，游戏不会主动更新已有舰船的修正，重新升级舰船以使改动生效"
 
  mopt_juggernaut.50.name: "调整默认主宰船坞数"
- mopt_juggernaut.50.desc: "这个数值需要与主宰的默认船坞数相同，如果你安装的模组中没有修改主宰船坞数的，那就不需要关心这个数值。对于模组作者，如果你修改了主宰的默认船坞数，可以通过覆盖@mopt_default_juggernaut_shipyard_count实现兼容。\n\n有一说一，需要这个设置的原因还是在于傻逼蠢驴不允许读取恒星基地的修正，nmd。"
+ mopt_juggernaut.50.desc: "该数值用于计算主宰实际获得的船坞上限修正，公式如下：\n§Y主宰船坞数修正§! = A槽船坞配件数 * 2 - 默认主宰船坞数\n§H主宰实际船坞数§! = 初始船坞数 + §Y主宰船坞数修正§!\n§L初始船坞数为禁用本功能时，主宰拥有的船坞数§!\n\n这个数值需要与主宰的初始船坞数相同，如果你安装的模组中没有修改主宰船坞数的，那就不需要关心这个数值。对于模组作者，如果你修改了主宰的默认船坞数，可以通过覆盖@@mopt_default_juggernaut_shipyard_count实现兼容。\n\n§H注意：§!使用法令进行调整后，游戏不会主动更新已有舰船的修正，重新升级舰船以使改动生效\n\n有一说一，需要这个设置的原因还是在于傻逼蠢驴不允许读取恒星基地的修正，nmd。"
  mopt_juggernaut.add_1: "§G+1§!"
  mopt_juggernaut.minus_1: "§R-1§!"
  mopt_juggernaut.reset: "重置为默认值"
  mopt_juggernaut.50.return: "返回"
  mopt_juggernaut.50.sep: "-------------------"
  mopt_juggernaut.50.sep.tooltip: "分割线"
- mopt_juggernaut_shipyard_count_desc: "默认$juggernaut$船坞数：§Y[global_event_country.v_mopt_juggernaut_shipyard_count]§!"
+ mopt_juggernaut_shipyard_count_desc: "默认$juggernaut$船坞数：§Y[from.v_mopt_juggernaut_shipyard_count]§!"
