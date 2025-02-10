@@ -1,0 +1,8 @@
+
+
+default = {
+	ship_of_size_limits = {
+		# 伞的进阶飞升 舰船 怒月
+		AAR_ship_HARSHMOON_limit
+	}
+}

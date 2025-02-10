@@ -1,0 +1,9 @@
+
+
+# 伞的进阶飞升 至高无上
+AAR_sv_cntr_TITAN_colossus_LIMIT = {
+	base = 32
+}
+AAR_sv_cntr_TITAN_juggernaut_LIMIT = {
+	base = 32
+}

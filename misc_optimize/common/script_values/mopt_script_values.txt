@@ -4,5 +4,15 @@
 mopt_juggernaut_shipyards_bonus = {
 	base = 0
 	add = modifier:mopt_juggernaut_shipyard_capacity_add
-	subtract = event_target:global_event_country.v_mopt_juggernaut_shipyard_count
+	subtract = owner.v_mopt_juggernaut_shipyard_count
+}
+
+# this = country
+mopt_juggernaut_limit_base = {
+	base = 0
+	add = value:AAR_sv_cntr_TITAN_juggernaut_LIMIT
+}
+mopt_colossus_limit_base = {
+	base = 0
+	add = value:AAR_sv_cntr_TITAN_colossus_LIMIT
 }
