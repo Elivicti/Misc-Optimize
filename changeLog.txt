@@ -27,3 +27,9 @@
 	[*]优化杜戈尔星系保底的传送效果
 	[*]资源文件覆盖更新
 [/list]
+
+
+[h3]* 2.22更新[/h3]
+[list]
+	[*]新增[url=https://steamcommunity.com/sharedfiles/filedetails/?id=1199002146]!伞の进阶飞升![/url]飞升：[b]至高无上[/b]兼容
+[/list]
