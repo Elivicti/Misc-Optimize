@@ -75,3 +75,7 @@
 	[*]如果其他MOD修改了[b]主宰的船坞上限[/b]，则会使主宰实际船坞数量与A槽配件提供的数量不符，其他模组作者可通过覆盖[b]@mopt_default_juggernaut_shipyard_count[/b]进行兼容
 [/list]
 如果需要我兼容某个MOD可以在留言区提出来。
+
+[h2]旧版本获取方式[/h2]
+本模组使用Github仓库保存历史版本：https://github.com/Elivicti/Misc-Optimize
+旧版本可通过tag寻找
