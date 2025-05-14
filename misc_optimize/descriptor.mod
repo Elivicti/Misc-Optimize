@@ -6,5 +6,5 @@ tags={
 }
 name="杂项优化"
 picture="thumbnail.png"
-supported_version="v3.14.*"
+supported_version="v4.0.*"
 remote_file_id="2813316428"
