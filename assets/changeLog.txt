@@ -33,3 +33,9 @@
 [list]
 	[*]新增[url=https://steamcommunity.com/sharedfiles/filedetails/?id=1199002146]!伞の进阶飞升![/url]飞升：[b]至高无上[/b]兼容
 [/list]
+
+
+[h3]* 5.14更新[/h3]
+[list]
+	[*]适配4.0
+[/list]
