@@ -95,7 +95,7 @@ country_event = {
 		response_text = mopt_judgement.0.desc
 		change_variable = {
 			which = v_mopt_judgement_planet_pop_max_threshold
-			value = 1
+			value = 100
 		}
 	}
 	option = {
@@ -104,7 +104,7 @@ country_event = {
 		response_text = mopt_judgement.0.desc
 		change_variable = {
 			which = v_mopt_judgement_planet_pop_max_threshold
-			value = 5
+			value = 500
 		}
 	}
 	option = {
@@ -112,11 +112,11 @@ country_event = {
 		is_dialog_only = yes
 		response_text = mopt_judgement.0.desc
 		allow = {
-			mopt_requires_planet_pop_max_threshold_variable = { value = 5 }
+			mopt_requires_planet_pop_max_threshold_variable = { value = 500 }
 		}
 		change_variable = {
 			which = v_mopt_judgement_planet_pop_max_threshold
-			value = -5
+			value = -500
 		}
 	}
 	option = {
@@ -124,11 +124,11 @@ country_event = {
 		is_dialog_only = yes
 		response_text = mopt_judgement.0.desc
 		allow = {
-			mopt_requires_planet_pop_max_threshold_variable = { value = 1 }
+			mopt_requires_planet_pop_max_threshold_variable = { value = 100 }
 		}
 		change_variable = {
 			which = v_mopt_judgement_planet_pop_max_threshold
-			value = -1
+			value = -100
 		}
 	}
 
@@ -222,7 +222,7 @@ country_event = {
 	show_sound = event_super_explosion
 
 	is_triggered_only = yes
-	
+
 	option = {
 		name = mopt_judgement.101.a
 	}
@@ -253,7 +253,7 @@ country_event = {
 	hide_window = yes
 
 	is_triggered_only = yes
-	
+
 	immediate = {
 		event_target:global_event_country = {
 			set_variable = {
@@ -264,9 +264,12 @@ country_event = {
 		capital_scope = { save_event_target_as = mopt_judgement_target_capital }
 		every_owned_planet = {
 			limit = {
-				num_pops <= event_target:mopt_judgement_initiator.v_mopt_judgement_planet_pop_max_threshold
+				count_owned_pop_amount = {
+					count <= event_target:mopt_judgement_initiator.v_mopt_judgement_planet_pop_max_threshold
+				}
+				# num_pops <= event_target:mopt_judgement_initiator.v_mopt_judgement_planet_pop_max_threshold
 			}
-			every_owned_pop = { kill_pop = yes }
+			every_owned_pop_group = { kill_pop_group = yes }
 			remove_all_buildings = yes
 			remove_all_districts = yes
 			clear_deposits = yes
@@ -357,7 +360,7 @@ country_event = {
 			text = mopt_judgement.1000.az
 			trigger = { has_global_flag = flag_g_mopt_judgement_did_not_destory_planet }
 		}
-		
+
 		custom_tooltip = mopt_destroyed_planet_count_tooltip
 	}
 

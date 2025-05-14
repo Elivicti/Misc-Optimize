@@ -174,9 +174,8 @@ mopt_birth_control = {
 		name = "policy_mopt_birth_quicken"
 		policy_flags = { policy_mopt_birth_quicken }
 		modifier = {
-			pop_growth_speed = 2.0
+			logistic_growth_mult = 2.0
 			planet_pop_assembly_mult = 2.0
-			planet_pop_assembly_organic_mult = 2.0
 		}
 		ai_weight = { weight = 0 }
 	}
@@ -184,9 +183,8 @@ mopt_birth_control = {
 		name = "policy_mopt_birth_slow"
 		policy_flags = { policy_mopt_birth_slow }
 		modifier = {
-			pop_growth_speed = -0.80
+			logistic_growth_mult = -0.80
 			planet_pop_assembly_mult = -0.80
-			planet_pop_assembly_organic_mult = -0.80
 		}
 		ai_weight = { weight = 0 }
 	}
