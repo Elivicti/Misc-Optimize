@@ -56,7 +56,7 @@ espionage_operation_event = {
 	option = {
 		name = mopt_espionage.110.a
 	}
-	
+
 }
 
 espionage_operation_event = {

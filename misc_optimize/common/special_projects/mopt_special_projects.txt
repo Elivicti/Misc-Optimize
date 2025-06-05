@@ -7,6 +7,6 @@ special_project = {
 	picture = GFX_evt_l-gateway
 
 	days_to_research = 1
-	
+
 	on_success = { }
 }

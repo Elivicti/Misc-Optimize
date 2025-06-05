@@ -9,60 +9,60 @@
 #### 巨构建造速度
  policy_mopt_megaspeed: "巨构建造速度"
  policy_mopt_megaspeed_desc: ""
- 
+
  policy_mopt_mega_speed_0: "无加成"
  policy_mopt_mega_speed_0_name: "无加成"
  policy_mopt_mega_speed_0_desc: ""
- 
+
  policy_mopt_mega_speed_1: "一级加成"
  policy_mopt_mega_speed_1_name: "一级加成"
  policy_mopt_mega_speed_1_desc: ""
- 
+
  policy_mopt_mega_speed_2: "二级加成"
  policy_mopt_mega_speed_2_name: "二级加成"
  policy_mopt_mega_speed_2_desc: ""
- 
+
  policy_mopt_mega_speed_3: "三级加成"
  policy_mopt_mega_speed_3_name: "三级加成"
  policy_mopt_mega_speed_3_desc: ""
- 
+
  policy_mopt_mega_speed_4: "四级加成"
  policy_mopt_mega_speed_4_name: "四级加成"
  policy_mopt_mega_speed_4_desc: ""
- 
+
  policy_mopt_mega_speed_5: "五级加成"
  policy_mopt_mega_speed_5_name: "五级加成"
  policy_mopt_mega_speed_5_desc: ""
 
  policy_mopt_mega_speed_tooltip_upgrade: "$TRIGGER_FAIL$ 至少需要上一级加成"
  policy_mopt_mega_speed_tooltip_wonders: "$TRIGGER_FAIL$ 需要§Y$ap_galactic_wonders$§!飞升天赋"
- 
+
 #### 巨构建造速度 END
 
 #### 巨构建造上限
  policy_mopt_megacap: "巨构建造上限"
  policy_mopt_megacap_desc: ""
- 
+
  policy_mopt_mega_cap_add_0: "无加成"
  policy_mopt_mega_cap_add_0_name: "无加成"
  policy_mopt_mega_cap_add_0_desc: ""
- 
+
  policy_mopt_mega_cap_add_1: "一级加成"
  policy_mopt_mega_cap_add_1_name: "一级加成"
  policy_mopt_mega_cap_add_1_desc: ""
- 
+
  policy_mopt_mega_cap_add_2: "二级加成"
  policy_mopt_mega_cap_add_2_name: "二级加成"
  policy_mopt_mega_cap_add_2_desc: ""
- 
+
  policy_mopt_mega_cap_add_3: "三级加成"
  policy_mopt_mega_cap_add_3_name: "三级加成"
  policy_mopt_mega_cap_add_3_desc: ""
- 
+
  policy_mopt_mega_cap_add_4: "四级加成"
  policy_mopt_mega_cap_add_4_name: "四级加成"
  policy_mopt_mega_cap_add_4_desc: ""
- 
+
  policy_mopt_mega_cap_add_5: "五级加成"
  policy_mopt_mega_cap_add_5_name: "五级加成"
  policy_mopt_mega_cap_add_5_desc: ""
@@ -71,15 +71,15 @@
 #### 计划生育
  policy_mopt_birth_control: "计划生育"
  policy_mopt_birth_control_desc: ""
- 
+
  policy_mopt_no_control: "无计划"
  policy_mopt_birth_no_control_name: "无计划生育"
  policy_mopt_no_control_desc: ""
- 
+
  policy_mopt_birth_quicken: "加快生育"
  policy_mopt_birth_quicken_name: "加快生育"
  policy_mopt_birth_quicken_desc: "有人急了，我不说是谁"
- 
+
  policy_mopt_birth_slow: "减缓生育"
  policy_mopt_birth_slow_name: "减缓生育"
  policy_mopt_birth_slow_desc: "太多了，卷不动了！"
@@ -88,11 +88,11 @@
 #### L-星门相关
  edict_mopt_lgate_content: "辽远之星：L-星门"
  edict_mopt_lgate_content_desc: "选择你的老婆"
- 
+
  chain_lgate_location_title: "L-星门坐标"
  chain_lgate_location_desc: "我老婆家门呢？"
  mopt_requires_lgate_enabled: "$TRIGGER_FAIL$需要在开局设置中启用L-星门"
- 
+
  edict_mopt_lgate_location: "定位$chain_lgate_location_title$"
  edict_mopt_lgate_location_desc: "$chain_lgate_location_desc$"
 

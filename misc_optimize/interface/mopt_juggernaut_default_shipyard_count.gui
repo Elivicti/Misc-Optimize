@@ -44,7 +44,7 @@ guiTypes = {
 			buttonFont = "cg_16b"
 			shortcut = "q"
 		}
-		
+
 		instantTextBoxType = { name = "heading" font = "malgun_goth_24" position = { x = -1120 y = -115 } }
 		buttonType = { name = "tts_button" position = { x = 46600 y = 639 } spriteType = "GFX_button_tts_start" }
 		buttonType = { name = "confirm_button" position = { x = -1117 y = -1145 } quadTextureSprite = "GFX_standard_button_142_34_button" }

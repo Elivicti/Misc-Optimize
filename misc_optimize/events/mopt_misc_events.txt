@@ -17,7 +17,7 @@ country_event = {
 	id = mopt_evt.1000
 	title = mopt_evt.1000.name
 	desc = mopt_evt.1000.desc
-	
+
 	picture = GFX_evt_drilling_for_gas
 	show_sound = event_construction
 

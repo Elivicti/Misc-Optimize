@@ -16,7 +16,7 @@ mopt_revenge_for_amoeba = {
 	potential = {
 		is_country_type = default
 		NOT = { is_in_federation_with = from }
-		
+
 		this = { has_country_flag = amoeba_ship_owner  }
 		from = { has_country_flag = amoeba_ship_killer }
 	}

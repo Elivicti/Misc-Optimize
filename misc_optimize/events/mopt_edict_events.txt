@@ -81,7 +81,7 @@ country_event = {
 						modifier = mopt_opinion_end_truce
 					}
 				}
-				
+
 				end_truce = root
 			}
 		}

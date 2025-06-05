@@ -124,7 +124,7 @@ country_event = {
 					}
 				}
 				set_star_flag = legendary_leader_spawn_system_teleporter
-				
+
 				save_event_target_as = test
 			}
 
